@@ -4465,7 +4465,8 @@ var inject$1 = function(acorn) {
 
   // this is the same parseObj that acorn has with...
   function parseObj(isPattern, refDestructuringErrors) {
-    let node = this.startNode(), first = true, propHash = {};
+    let node = this.startNode();
+    let first = true, propHash = {};
     node.properties = [];
     this.next();
     while (!this.eat(tt.braceR)) {
